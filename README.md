@@ -12,6 +12,11 @@ docker build -t recap/transcriber:latest .
 docker run --name transcriber --gpus all recap/transcriber:latest
 ```
 
+## How to use
+Connect to `ws://localhost:9090` via websocket and send binary audio chunks
+in format of `np.ndarray` with `dtype=np.float32`, and `sampling_rate=16000`.
+You will receive `{"id": "The sequence number of the sent chunk", "text": "Transcribed text"}`
+
 ## Experiments results
 The model used: large-v3
 GPU used: RTX 4060 Laptop
