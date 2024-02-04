@@ -9,7 +9,7 @@ Installed `docker` with `nvidia-container-toolkit` installed.
 ## How to run
 ```shell
 docker build -t recap/transcriber:latest .
-docker run --name transcriber --gpus all recap/transcriber:latest
+docker run --name transcriber --gpus all -v ./data:/app/data recap/transcriber:latest
 ```
 
 ## How to use
