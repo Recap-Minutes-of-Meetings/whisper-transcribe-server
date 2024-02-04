@@ -3,7 +3,6 @@ import json
 import threading
 import websockets
 import torch
-import os
 import numpy as np
 
 from transformers import pipeline
