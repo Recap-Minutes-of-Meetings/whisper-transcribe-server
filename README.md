@@ -1,5 +1,5 @@
 # whisper-transcribe-server
-Whisper websockets server with batched inference using flashattn2 within Docker
+Whisper websockets server with batched inference using FlashAttention-2 within Docker
 
 ## Requirements
 CUDA 12.1-compatible GPU.
