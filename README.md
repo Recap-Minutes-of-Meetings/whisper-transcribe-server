@@ -1,4 +1,4 @@
-# whisper-transcribe-server
+# Whisper Transcriber Server
 Whisper websockets server with batched inference using FlashAttention-2 within Docker
 
 ## Requirements
@@ -15,7 +15,9 @@ docker run --name transcriber --gpus all recap/transcriber:latest
 ## How to use
 Connect to `ws://localhost:9090` via websocket and send binary audio chunks
 in format of `np.ndarray` with `dtype=np.float32`, and `sampling_rate=16000`.
-You will receive `{"id": "The sequence number of the sent chunk", "text": "Transcribed text"}`
+You will receive `{"id": "The sequence number of the sent chunk", "text": "Transcribed text"}`.
+
+Check out the `test/test.py` file for more clear usage example.
 
 ## Experiments results
 The model used: large-v3
